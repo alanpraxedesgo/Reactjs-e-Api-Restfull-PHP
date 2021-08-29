@@ -2,7 +2,7 @@ import React from "react";
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL:"http://localhost/taskdev/api/"
+    baseURL:"http://localhost/app_name/api/"
 });
 
 api.interceptors.response.use(function(response){
