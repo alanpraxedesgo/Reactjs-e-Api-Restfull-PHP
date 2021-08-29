@@ -1,0 +1,12 @@
+Options -Indexes
+IndexIgnore *
+
+<Files ~ "\.(env|json|config.js|md|gitignore|gitattributes|lock|log)$">
+  Require all denied
+</Files>
+
+<ifModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]
+</ifModule>
